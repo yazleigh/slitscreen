@@ -9,12 +9,12 @@ function setup() {
   video.size(windowWidth, windowHeight);
   video.hide();
   background(0);
-  //filter(THRESHOLD,2);
 }
 
 function draw(){
   video.loadPixels();
-  //filter(GRAY);
+  //filter(THRESHOLD,2);
+  filter(GRAY);
   //filter(POSTERIZE,8);
   //image(video, 0, 0);
   
