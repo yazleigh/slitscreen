@@ -3,10 +3,10 @@ var video;
 var x = 0;
 
 function setup() {
-  createCanvas(700, 400);
+  createCanvas(windowWidth, windowHeight);
   pixelDensity(1);
   video = createCapture(VIDEO);
-  video.size(700, 400);
+  video.size(windowWidth, windowHeight);
   video.hide();
   background(0);
   //filter(THRESHOLD,2);
