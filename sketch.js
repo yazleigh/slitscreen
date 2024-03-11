@@ -3,7 +3,7 @@ var video;
 var x = 0;
 
 function setup() {
-  createCanvas(displayWidth, displayHeight);
+  createCanvas(displayWidth, displayWidth/2);
   pixelDensity(1);
 
   var constraints = {
