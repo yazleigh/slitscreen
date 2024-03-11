@@ -3,12 +3,25 @@ var video;
 var x = 0;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(displayWidth, displayHeight);
   pixelDensity(1);
-  video = createCapture(VIDEO);
-  video.size(windowWidth, windowHeight);
+
+  var constraints = {
+    audio: false,
+    video: {
+      facingMode: {
+        exact: "environment"
+      }
+    }    
+    //video: {
+      //facingMode: "user"
+    //} 
+  };
+  video = createCapture(VIDEO, constraints);
+  video.size(displayWidth, displayWidth/2);
   video.hide();
   background(0);
+
 }
 
 function draw(){
